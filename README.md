@@ -17,9 +17,9 @@
 | \gbSigner{签发人1,签发人2,···}                          | 签发人(可选)   |
 | \title{}                                                | 标题           |
 | \makegbstandard                                         | 标准公文       |
-| \makegbletter                                           | 信函公文       |
-| \makegbcommand                                          | 命令公文       |
-| \makegbnote                                             | 纪要公文       |
+| *\makegbletter                                           | 信函公文       |
+| *\makegbcommand                                          | 命令公文       |
+| *\makegbnote                                             | 纪要公文       |
 | \makegbsign{发文机关署名}{成文日期}                     | 署名与日期     |
 | \makebanji{抄送单位1,抄送单位2,···}{印发机关}{印发日期} | 版记           |
 
