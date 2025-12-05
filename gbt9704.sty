@@ -1,0 +1,32 @@
+% gbt9704.sty - auxiliary macros
+\ProvidesPackage{gbt9704}[2025/12/04 helper macros]
+
+\RequirePackage{xparse}
+\RequirePackage{xcolor}
+
+% 份号 / 密级 / 紧急程度（顶格左上）
+\NewDocumentCommand{\fenhao}{O{} O{} O{}}{%
+  % usage: \fenhao[份号][密级][紧急]
+  \noindent
+  \begin{minipage}[t]{0.33\textwidth}
+    \raggedright \fontsize{12pt}{12pt}\selectfont #1
+  \end{minipage}%
+  \begin{minipage}[t]{0.33\textwidth}
+    \raggedright \fontsize{12pt}{12pt}\selectfont #2
+  \end{minipage}%
+  \begin{minipage}[t]{0.33\textwidth}
+    \raggedright \fontsize{12pt}{12pt}\selectfont #3
+  \end{minipage}\par\vspace{6pt}
+}
+
+% 联合行文：并列发文机关（居中上方，多个时平均分配）
+\NewDocumentCommand{\lianhe}{m}{%
+  \begin{center}
+    {\CJKfamily{GBTtitle}\textcolor{red}{\fontsize{\gbt@titlefontsize}{\gbt@titlefontsize}\selectfont #1}}
+  \end{center}\vspace{3mm}
+}
+
+% 附注（7.3.6）
+\newcommand{\fuzhu}[1]{\par\vspace{6pt}\noindent（#1）\par}
+
+\endinput
